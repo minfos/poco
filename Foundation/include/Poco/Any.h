@@ -78,7 +78,7 @@ public:
 
 	Placeholder(): pHolder(0)
 	{
-		std::memset(holder, 0, sizeof(Placeholder));
+		std::memset(holder, 0, sizeof(holder));
 	}
 
 	~Placeholder()
@@ -153,7 +153,7 @@ private:
 			else
 				reinterpret_cast<PlaceholderT*>(holder)->~PlaceholderT();
 
-			if (clear) std::memset(holder, 0, sizeof(Placeholder));
+			if (clear) std::memset(holder, 0, sizeof(holder));
 		}
 	}
 
